@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(90deg, #0074D9 60%, #00c3ff 100%);
+            color: #fff;
+            padding: 2rem 1rem 1rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #222;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0;
+        }
+        nav a {
+            display: block;
+            padding: 1rem 2rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 6px 6px 0 0;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        nav a:hover, nav a.active {
+            background: #00c3ff;
+            color: #222;
+            box-shadow: 0 4px 16px rgba(0,195,255,0.15);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .grid {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            flex: 1;
+            background: #fff;
+            padding: 2rem 1.5rem;
+            border-radius: 18px;
+            min-width: 220px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e0eafc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.13);
+            border-color: #00c3ff;
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #0074D9;
+            font-size: 2rem;
+        }
+        .card p {
+            color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+        }
+        .card .card-link {
+            margin-top: auto;
+            display: inline-block;
+            background: #0074D9;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .card .card-link:hover {
+            background: #00c3ff;
+            color: #222;
+        }
+        /* Responsive styles */
+        @media (max-width: 900px) {
+            .grid {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 0.5rem;
+            }
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+                background: #0074D9;
+                color: #fff;
+                border: none;
+                padding: 1rem;
+                width: 100%;
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+        }
+        @media (min-width: 701px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+        footer {
+            background: linear-gradient(90deg, #0074D9 60%, #00c3ff 100%);
+            color: #fff;
+            text-align: center;
+            padding: 1.2rem 0 1rem 0;
+            margin-top: 3rem;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            border-radius: 18px 18px 0 0;
+            box-shadow: 0 -2px 16px rgba(0,0,0,0.07);
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #e0eafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b3c6e0;
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0074D9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Webpage </h1>
+        <p>This page adapts to different screen sizes.</p>
+    </header>
+    <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+        <ul id="nav-list">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <h2>HTML</h2>
+                <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages and web applications.</p>
+                <a href="html.html" class="card-link">Learn More</a>
+            </div>
+            <div class="card">
+                <h2>CSS</h2>
+                <p>CSS (Cascading Style Sheets) is used to describe the presentation and layout of web pages, including colors, layout, and fonts.</p>
+                <a href="css.html" class="card-link">Learn More</a>
+            </div>
+            <div class="card">
+                <h2>JavaScript</h2>
+                <p>JavaScript is a programming language that enables interactive web pages and dynamic user interfaces.</p>
+                <a href="javascript.html" class="card-link">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            &copy; 2024 Responsive Design. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var navList = document.getElementById('nav-list');
+            navList.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

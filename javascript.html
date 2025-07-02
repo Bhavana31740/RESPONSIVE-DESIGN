@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Responsive Design </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #fceabb 0%, #f8b500 100%);
+            margin: 0;
+            min-height: 100vh;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #222;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0;
+        }
+        nav a {
+            display: block;
+            padding: 1rem 2rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 6px 6px 0 0;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        nav a:hover, nav a.active {
+            background: #f8b500;
+            color: #222;
+            box-shadow: 0 4px 16px rgba(248,181,0,0.15);
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 18px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+        }
+        h1 {
+            color: #f8b500;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: #f8b500;
+            margin-top: 2rem;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        .about-section {
+            background: #fffbe6;
+            border-left: 5px solid #f8b500;
+            padding: 1.2rem 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(248,181,0,0.07);
+        }
+        .about-section p {
+            color: #444;
+            font-size: 1.15rem;
+        }
+        footer {
+            background: linear-gradient(90deg, #f8b500 60%, #fceabb 100%);
+            color: #222;
+            text-align: center;
+            padding: 1.2rem 0 1rem 0;
+            margin-top: 3rem;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            border-radius: 18px 18px 0 0;
+            box-shadow: 0 -2px 16px rgba(0,0,0,0.07);
+        }
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #fceabb;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f8b500;
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e0a800;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="javascript.html" class="active">JavaScript</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>JavaScript</h1>
+        <div class="about-section">
+            <p>
+                <strong>JavaScript</strong> is a powerful, high-level programming language that is essential for modern web development. It enables you to create interactive, dynamic, and engaging user experiences directly in the browser. JavaScript can update and change both HTML and CSS, control multimedia, animate images, and much more.
+            </p>
+        </div>
+        <h2>Features</h2>
+        <ul>
+            <li>DOM manipulation for dynamic content</li>
+            <li>AJAX and API calls for asynchronous data</li>
+            <li>Modern ES6+ syntax and features</li>
+            <li>Popular frameworks: React, Vue, Angular, etc.</li>
+            <li>Event handling and user interaction</li>
+        </ul>
+        <h2>About</h2>
+        <p>
+            JavaScript is supported by all modern browsers and is the foundation of client-side web programming. With the rise of Node.js, JavaScript is also used for server-side development, making it a truly versatile language.
+        </p>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:js@example.com" style="color:#f8b500;">js@example.com</a></p>
+    </div>
+    <footer>
+        <div class="footer-content">
+            &copy; 2024 Responsive Design . All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

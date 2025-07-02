@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Responsive Design </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            min-height: 100vh;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #222;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0;
+        }
+        nav a {
+            display: block;
+            padding: 1rem 2rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 6px 6px 0 0;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        nav a:hover, nav a.active {
+            background: #00c3ff;
+            color: #222;
+            box-shadow: 0 4px 16px rgba(0,195,255,0.15);
+        }
+        .container {
+            max-width: 600px;
+            margin: 3rem auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+            padding: 2.5rem 2rem;
+        }
+        h1 {
+            color: #0074D9;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        label {
+            font-weight: 500;
+            color: #333;
+        }
+        input, textarea {
+            padding: 0.8rem;
+            border-radius: 6px;
+            border: 1px solid #b3c6e0;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border 0.2s;
+        }
+        input:focus, textarea:focus {
+            border: 1.5px solid #0074D9;
+            outline: none;
+        }
+        button {
+            background: linear-gradient(90deg, #0074D9 60%, #00c3ff 100%);
+            color: #fff;
+            border: none;
+            padding: 1rem 0;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 0.5rem;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #00c3ff 60%, #0074D9 100%);
+            color: #222;
+        }
+        .info {
+            margin-top: 2rem;
+            text-align: center;
+            color: #555;
+        }
+        footer {
+            background: linear-gradient(90deg, #0074D9 60%, #00c3ff 100%);
+            color: #fff;
+            text-align: center;
+            padding: 1.2rem 0 1rem 0;
+            margin-top: 3rem;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            border-radius: 18px 18px 0 0;
+            box-shadow: 0 -2px 16px rgba(0,0,0,0.07);
+        }
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #e0eafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b3c6e0;
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0074D9;
+        }
+        @media (max-width: 700px) {
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+                background: #0074D9;
+                color: #fff;
+                border: none;
+                padding: 1rem;
+                width: 100%;
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+        }
+        @media (min-width: 701px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html">CSS</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your Name" required>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="your@email.com" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="info">
+            <p>Or email us directly at <a href="mailto:info@example.com" style="color:#0074D9;">info@example.com</a></p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            &copy; 2024 Responsive Design. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

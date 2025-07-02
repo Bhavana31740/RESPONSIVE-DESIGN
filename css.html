@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Responsive Design </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #cfdef3 0%, #e0eafc 100%);
+            margin: 0;
+            min-height: 100vh;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #222;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0;
+        }
+        nav a {
+            display: block;
+            padding: 1rem 2rem;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 6px 6px 0 0;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        nav a:hover, nav a.active {
+            background: #00c3ff;
+            color: #222;
+            box-shadow: 0 4px 16px rgba(0,195,255,0.15);
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 18px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+        }
+        h1 {
+            color: #00c3ff;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: #0074D9;
+            margin-top: 2rem;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        .about-section {
+            background: #f0f7ff;
+            border-left: 5px solid #0074D9;
+            padding: 1.2rem 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,116,217,0.07);
+        }
+        .about-section p {
+            color: #444;
+            font-size: 1.15rem;
+        }
+        footer {
+            background: linear-gradient(90deg, #0074D9 60%, #00c3ff 100%);
+            color: #fff;
+            text-align: center;
+            padding: 1.2rem 0 1rem 0;
+            margin-top: 3rem;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            border-radius: 18px 18px 0 0;
+            box-shadow: 0 -2px 16px rgba(0,0,0,0.07);
+        }
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #e0eafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b3c6e0;
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0074D9;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html.html">HTML</a></li>
+            <li><a href="css.html" class="active">CSS</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>CSS</h1>
+        <div class="about-section">
+            <p>
+                <strong>CSS (Cascading Style Sheets)</strong> is used to control the style and layout of web pages. It allows you to create visually appealing, responsive, and modern websites by separating content from design.
+            </p>
+        </div>
+        <h2>Features</h2>
+        <ul>
+            <li>Responsive design with media queries</li>
+            <li>Animations and transitions</li>
+            <li>Grid and Flexbox layouts</li>
+            <li>Custom properties (variables)</li>
+            <li>Theming and custom styles</li>
+        </ul>
+        <h2>About</h2>
+        <p>
+            CSS works together with HTML and JavaScript to create beautiful and interactive web experiences. Mastery of CSS is essential for any front-end developer.
+        </p>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:css@example.com" style="color:#0074D9;">css@example.com</a></p>
+    </div>
+    <footer>
+        <div class="footer-content">
+            &copy; 2024 Responsive Design. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
